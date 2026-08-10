@@ -40,7 +40,7 @@ h1 { margin: 0; font-size: clamp(1.55rem, 7vw, 2rem); line-height: 1.25; }
 .decline-hint { min-height: 1.2em; margin: 0; color: #714957; font-size: .82rem; }
 form { display: grid; gap: 8px; }
 label { margin-top: 8px; text-align: left; font-weight: 700; }
-input { width: 100%; min-height: 48px; border: 1px solid #e8b6c8; border-radius: 16px; padding: 0 14px; color: inherit; background: #fffaf8; font: inherit; }
+input { width: 80%; min-height: 48px; border: 1px solid #e8b6c8; border-radius: 16px; padding: 0 14px; color: inherit; background: #fffaf8; font: inherit; }
 .field-error { min-height: 1em; margin: 0; color: #a8335d; font-size: .78rem; text-align: left; }
 #success-view:not([hidden]), #declined-view:not([hidden]) { display: grid; place-content: center; gap: 14px; text-align: center; }
 .celebration { color: #a8335d; font-size: 1.6rem; animation: celebrate 700ms ease-out 1 both; transform-origin: center; }
