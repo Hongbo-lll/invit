@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f8dce6">
+  <title>一起吃饭嘛？</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="phone-shell" aria-live="polite">
+    <section id="invitation-view" class="view invitation-view">
+      <header class="invitation-copy">
+        <p class="eyebrow">SWEET INVITATION</p>
+        <h1 id="invitation-heading" tabindex="-1">可以约你一起吃饭嘛？</h1>
+      </header>
+      <figure class="hero-frame">
+        <img src="assets/my-melody-hero.png" alt="美乐蒂抱着爱心信封，周围有草莓和花朵">
+      </figure>
+      <p id="decline-hint" class="decline-hint" aria-live="polite"></p>
+      <div class="invitation-actions">
+        <button id="accept-button" class="button button-primary" type="button">好呀 ♡</button>
+        <button id="decline-button" class="button button-secondary" type="button">再想想</button>
+      </div>
+    </section>
+
+    <section id="details-view" class="view" hidden>
+      <header><p class="eyebrow">DINNER DETAILS</p><h2 id="details-heading" tabindex="-1">那我们约好啦</h2></header>
+      <form id="details-form" novalidate>
+        <label for="date-input">日期</label>
+        <input id="date-input" name="date" type="date" required aria-describedby="date-error">
+        <p id="date-error" class="field-error" aria-live="polite"></p>
+        <label for="time-input">时间</label>
+        <input id="time-input" name="time" type="time" required aria-describedby="time-error">
+        <p id="time-error" class="field-error" aria-live="polite"></p>
+        <label for="restaurant-input">餐厅或想吃的东西</label>
+        <input id="restaurant-input" name="restaurant" type="text" autocomplete="off" required aria-describedby="restaurant-error" placeholder="例如：火锅、寿司、小餐馆">
+        <p id="restaurant-error" class="field-error" aria-live="polite"></p>
+        <button id="confirm-button" class="button button-primary" type="submit">就这么定啦 ♡</button>
+      </form>
+    </section>
+
+    <section id="success-view" class="view" hidden>
+      <p class="celebration" aria-hidden="true">♡ ✿ ♡</p>
+      <h2 id="success-heading" tabindex="-1">约饭成功！</h2>
+      <dl id="confirmation-details"></dl>
+      <button id="restart-button" class="button button-secondary" type="button">再看一次</button>
+    </section>
+
+    <section id="declined-view" class="view" hidden>
+      <p class="declined-icon" aria-hidden="true">🌷</p>
+      <h2 id="declined-heading" tabindex="-1">好吧，下次再约～</h2>
+      <p>今天也要开开心心的。</p>
+    </section>
+  </main>
+  <script src="script.js" type="module"></script>
+</body>
+</html>
