@@ -61,7 +61,9 @@ declineButton.addEventListener("click", (event) => {
   invitationState = applyDecline(invitationState, {
     reducedMotion: reducedMotion.matches || event.detail === 0,
   });
+
   declineHint.textContent = invitationState.message;
+
   if (invitationState.screen === "declined") {
     showView("declined-view");
   } else if (invitationState.shouldMove) {
